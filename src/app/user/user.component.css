@@ -1,0 +1,17 @@
+h1 {
+  text-align: center;
+  font-style: italic;
+
+  font-size: 50px;
+  color:red;
+
+}
+.jumbotron {
+  background-color:gray;
+    padding: 100px;
+    background-image:url("src/assets/mag1.jpeg");
+}
+form {
+  padding-top: 20px;
+  font-size: 20px;
+}
