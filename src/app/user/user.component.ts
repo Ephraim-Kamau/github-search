@@ -1,17 +1,33 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { ProfilesService } from '../profiles.service'
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
+
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  profile:any[];
+  repos:any[];
+  username: string;
 
-  ngOnInit(){  
+  constructor(private profilesService: ProfilesService) {
+   }
+
+findProfile() {
+  this.profilesService.updateProfile(this.username);
+  this.profilesService.getProfileInfo().subscribe(profile => {
+    console.log(profile);
+    this.profile = profile;
+  });
+
+ this.profilesService.getProfileRepos().subscribe(repos => {
+ console.log(repos);
+ this.repos = repos;
+});
+}
+  ngOnInit(){
   }
-
-
 }

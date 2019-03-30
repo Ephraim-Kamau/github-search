@@ -11,7 +11,7 @@
     <form action="" class="form-user">
       <div class="form-group">
         <label for="name">User Name</label> <br>
-        <input type="text"  class="form-control" placeholder="Username:" [(ngModel)]="username" name="username">
+        <input type="text"  class="form-control" placeholder="Username:" [(ngModel)]="username" name="username" (keyup)="findProfile()">
         </div>
         </form>
 
