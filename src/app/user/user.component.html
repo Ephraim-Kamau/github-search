@@ -11,8 +11,9 @@
     <form action="" class="form-user">
       <div class="form-group">
         <label for="name">User Name</label> <br>
-        <input type="text"  class="form-control" placeholder="Username:" [(ngModel)]="username" name="username" (keyup)="findProfile()">
+        <input type="text"  class="form-control" placeholder="Username:" [(ngModel)]="username" name="username" (keydown)="findProfile()">
         </div>
+
         </form>
 
 <hr>
@@ -34,8 +35,9 @@
         <hr>
 
         <div class="col-sm-5">
-          <ul class="list-group">
-            <li class="list-group-item" *ngIf="profile.name"><h4><strong>{{profile.name}}</strong></h4></li>
+
+          <h4><strong>{{profile.name}}</strong></h4>
+                    <ul class="list-group">
             <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
             <li class="list-group-item" *ngIf="profile.url" target="_blank">Profile: <a href="{{profile.html_url}}">{{profile.html_url}}</a></li>
             <li class="list-group-item" *ngIf="profile.email">Email: <a href="{{profile.email}}">{{profile.email}}</a></li>
@@ -46,10 +48,10 @@
         <div class="col-sm-4">
           <div>
             <p>
-              <span class="label label-primary">{{profile.followers}} Followers</span>
-              <span class="label label-success">{{profile.following}} Following</span>
-              <span class="label label-default">{{profile.public_gists}} Public Gists</span>
-              <span class="label label-info">{{profile.public_repos}} Public Repositories</span>
+              <span class="label label-primary">{{profile.followers}} Followers</span><br>
+              <span class="label label-success">{{profile.following}} Following</span><br>
+              <span class="label label-default">{{profile.public_gists}} Public Gists</span><br>
+              <span class="label label-info">{{profile.public_repos}} Public Repositories</span><br>
             </p>
 
             <div class=panel panel-default>

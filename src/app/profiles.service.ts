@@ -10,18 +10,19 @@ export class ProfilesService {
 
 
 constructor(private http:HttpClient) {
-  console.log('Ready!!')
-this.username = 'Ephraim-Kamau';
+
+//this.username = '';
  }
 
 
-getProfileInfo() {
-return this.http.get('https://api.github.com/users/' + this.username + '?this.clientapi' + 'this.clientapi')
-}
+ getProfileInfo() {
+ return this.http.get('https://api.github.com/users/' + this.username + '?access_token=' + this.clientapi)
+ // 'https://api.github.com/users/daneden?access_token=' + apiKey
+ }
 
-getProfileRepos() {
-  return this.http.get('https://api.github.com/users/' +  this.username +  '/repos?clientapi' + 'repos?clientapi')
-}
+ getProfileRepos() {
+   return this.http.get('https://api.github.com/users/' +  this.username +  '/repos' + '?access_token=' + this.clientapi)
+ }
 
 updateProfile(username:string) {
   this.username = username;
