@@ -10,3 +10,12 @@ h1 {
     padding: 100px;
     background-image:url("src/assets/mag1.jpeg");
 }
+img{
+  width:25%;
+  height:25%;
+  padding-left: 15%;
+}
+.row {
+  padding-left: 10%;
+  background-color: #F9D20F;
+}
