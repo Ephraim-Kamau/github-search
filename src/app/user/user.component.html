@@ -1,39 +1,38 @@
 <div class="container-fluid">
-<div class = "jumbotron">
-<h1> GITHUB SEARCH</h1>
-</div>
+  <div class = "jumbotron">
+    <h1> GITHUB SEARCH</h1>
+  </div>
 
-</div>
-<hr>
-<br>
+  </div>
+    <hr>
+    <br>
 
   <div class="row">
-    <br>
-    <form action="" class="form-user">
-      <div class="form-group">
-        <label for="name">User Name</label> <br><br>
-        <input type="text" class="form-control" placeholder="Username:" [(ngModel)]="username" name="username" (keydown)="findProfile()">
-        </div>
+      <br>
+        <form action="" class="form-user">
+          <div class="form-group">
+            <label for="name">User Name</label> <br><br>
+              <input type="text" class="form-control" placeholder="Username:" [(ngModel)]="username" name="username" (keydown)="findProfile()">
+          </div>
         </form>
-<br>
-<hr>
+    <br>
+    <hr>
 
-
-          <div *ngIf="profile">
-            <div class="col-md-4">
-              <img src="{{profile.avatar_url}}" class="img-circle img-responsive"alt="Profile Picture">
-            </div>
-            <hr>
-            <div class="col-sm-4">
-          <ul class="list-group">
-            <h4><strong>{{profile.name}}</strong></h4>
-            <p>Profile created on:{{profile.created_at}}</p>
-            <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
-            <li class="list-group-item" *ngIf="profile.url" target="_blank">Profile: <a href="{{profile.html_url}}">{{profile.html_url}}</a></li>
-            <li class="list-group-item" *ngIf="profile.email">Email: <a href="{{profile.email}}">{{profile.email}}</a></li>
-            <li class="list-group-item" *ngIf="profile.public_repos">Public Repositories: {{profile.public_repos}}</li>
-          </ul>
-        </div>
+  <div *ngIf="profile">
+      <div class="col-md-4">
+          <img src="{{profile.avatar_url}}" class="img-circle img-responsive"alt="Profile Picture">
+              </div>
+              <hr>
+          <div class="col-sm-4">
+            <ul class="list-group">
+              <h4><strong>{{profile.name}}</strong></h4>
+              <p>Profile created on:{{profile.created_at}}</p>
+                <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
+                <li class="list-group-item" *ngIf="profile.url" target="_blank">Profile: <a href="{{profile.html_url}}">{{profile.html_url}}</a></li>
+                <li class="list-group-item" *ngIf="profile.email">Email: <a href="{{profile.email}}">{{profile.email}}</a></li>
+                <li class="list-group-item" *ngIf="profile.public_repos">Public Repositories: {{profile.public_repos}}</li>
+            </ul>
+          </div>
 
         <div class="col-sm-4">
           <div>
@@ -48,18 +47,15 @@
 
             <p> <a href="{{profile.html_url}}" target="_blank" class="btn btn-primary btn-sm">View Profile</a></p>
 
-<hr>
-
-            <div class=panel panel-default>
-              <div class="panel-Heading">
-                <h3 class="panel-title">Repos</h3>
-              </div>
+      <hr>
+          <div class=panel panel-default>
+            <div class="panel-Heading">
+              <h3 class="panel-title">Repos</h3>
+            </div>
               <div class="panel-body" *ngFor="let repo of repos">
                 <p class="clearfix">
                   {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-primary pull-right">View Project on GitHub</a>
                 </p>
-
-
 
                 <p>{{repo.description}}</p>
               </div>
