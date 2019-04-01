@@ -13,13 +13,13 @@ export class ProfilesService {
 
 constructor(private http:HttpClient) {
 
-//this.username = '';
+
  }
 
 
  getProfileInfo() {
- return this.http.get(this.url/ + this.username + '/?access_token=' + this.clientapi)
- // 'https://api.github.com/users/daneden?access_token=' + apiKey
+ return this.http.get(this.url + this.username + '?access_token=' + this.clientapi)
+
  }
 
  getProfileRepos() {
