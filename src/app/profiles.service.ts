@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Headers } from '@angular/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +9,7 @@ export class ProfilesService {
   private clientapi = 'f025ef81925f23413aefd5f80b322edbbd1a9b1a';
 
 
-constructor(private http:Http) {
+constructor(private http:HttpClient) {
   console.log('Ready!!')
 this.username = 'Ephraim-Kamau';
  }
@@ -29,5 +29,4 @@ updateProfile(username:string) {
 
  ngOnInit() { }
 
-}
 }

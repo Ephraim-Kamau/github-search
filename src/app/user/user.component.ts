@@ -20,12 +20,12 @@ findProfile() {
   this.profilesService.updateProfile(this.username);
   this.profilesService.getProfileInfo().subscribe(profile => {
     console.log(profile);
-    this.profile = profile;
+     this.profile = profile;
   });
 
  this.profilesService.getProfileRepos().subscribe(repos => {
  console.log(repos);
- this.repos = repos;
+this.repos = repos;
 });
 }
   ngOnInit(){
