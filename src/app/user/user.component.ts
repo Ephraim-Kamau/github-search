@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfilesService } from '../profiles.service'
-// import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from '@angular/core';
 
 @Component({
   selector: 'app-user',

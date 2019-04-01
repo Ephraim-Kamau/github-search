@@ -27,6 +27,7 @@
             <div class="col-sm-4">
           <ul class="list-group">
             <h4><strong>{{profile.name}}</strong></h4>
+            <p>Profile created on:{{profile.created_at}}</p>
             <li class="list-group-item" *ngIf="profile.bio">{{profile.bio}}</li>
             <li class="list-group-item" *ngIf="profile.url" target="_blank">Profile: <a href="{{profile.html_url}}">{{profile.html_url}}</a></li>
             <li class="list-group-item" *ngIf="profile.email">Email: <a href="{{profile.email}}">{{profile.email}}</a></li>
