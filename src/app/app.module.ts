@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { RepositoryComponent } from './repository/repository.component';
 import { AboutComponent } from './about/about.component';
+import { DatePipe } from './date.pipe';
 
 const routes:Routes=[
 
@@ -19,7 +20,8 @@ const routes:Routes=[
     AppComponent,
     UserComponent,
     RepositoryComponent,
-    AboutComponent
+    AboutComponent,
+    DatePipe
   ],
   imports: [
     BrowserModule,
