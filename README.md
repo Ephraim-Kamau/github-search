@@ -16,7 +16,7 @@ For the application to run on your local machine, you must have Angular and Boot
 When all these requirements have been met, you can clone the   application by running the command `git clone https://https://github.com/Ephraim-Kamau/github-search` on your local machine. Open the terminal and navigate to where you have cloned the application. Run the command `ng serve`. This initiates a server and allows you to view the application on a web browser.
 
 #### Live Demo
-To view the Github Search page, click here:
+To view the Github Search page, click here: <a href ="https://ephraim-kamau.github.io/github-search/">Github Search</href>
 
 #### Technologies used
 <ul>
