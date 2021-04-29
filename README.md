@@ -26,7 +26,7 @@ To view the Github Search page, click here: <a href ="https://ephraim-kamau.gith
 </ul>
 
 #### Contact details
-You can contact me at kephraim19@gmail.com
+You can contact me via email: kephraim19@gmail.com
 
 #### Licence
 Copyright (c) 2018 Ephraim Kamau
